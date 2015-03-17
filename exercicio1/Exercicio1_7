@@ -1,0 +1,7 @@
+variavel 3 = 7
+variavel 4 = 10.5
+variavel 5 = 10.0
+variavel 4 é maior a 10
+variavel 5 é menor igual a 10
+
+Ocorreu a transformação da variavel2 tipo int para float, então a divisão da mesma deixou de ser uma divisão inteira.
