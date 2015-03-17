@@ -1,0 +1,4 @@
+Paulo Rodrigues Júnior
+
+No exercício três deu os valores normais, só que na divisão deu "0" pois se trata de valores inteiros. Já no exercício quatro a divisão deu valor diferente,
+pelo motivo que o valor inteiro da divisão foi alterada para real, sendo assim houve a alteração do valor de "0" para "0.75". Já na atividade cinco teve a alteração dos valores real para double, deu o mesmo valor da atividade quatro, porém o double tem um diferencial, que seria a sua melhor precisão na hora de realizar suas operações. 
