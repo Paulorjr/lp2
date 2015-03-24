@@ -1,0 +1,7 @@
+1) Tipo Abstrato de dados: TAD é uma coleção bem definida de dados a serem armazenados, e um grupo de operadores que podem ser aplicados para manipulação desses dados.Ou seja, Os operadores do TAD implementam regras bem definidas para manipulação dos valores armazenados para que sejam o mais expecifico possível.
+
+Classe: classe é uma estrutura que relaciona um conjunto de objetos com características parecidadas. A classe define o comportamento de seus objetos através de métodos e as ações possíveis destes objetos através de atributos.
+
+Objeto: objeto é uma referência a um local da memória que possui um valor. Um objeto pode ser uma variável, função, ou estrutura de dados. Na programação, a palavra objeto refere-se a uma instância de uma classe.
+
+Mensagens: Métodos são procedimentos que podem manipular atributos de certos objetos para os quais o método foi definido. Além disso, métodos também podem definir e manipular variáveis locais; E podem receber parâmetros por valor através da lista de argumentos.
