@@ -1,0 +1,61 @@
+public class ContaBancaria2{
+
+	int agencia;
+	int contaCorrente;
+	double saldo;
+	double limiteExtra;
+	String titularConta;
+
+	public void imprimirSaldo(){
+		System.out.println("Saldo: " + this.saldo);
+	}
+
+	public void imprimirSaldoTotal(){
+		double saldoTotal = this.saldo + this.limiteExtra;
+		System.out.println("Saldo total: " + saldoTotal);
+	}
+
+	public void imprimirAgencia(){
+		System.out.println("A agencia e: " + this.agencia);
+	}
+
+	public void imprimirContaCorrente(){
+		System.out.println("A conta-corrente e: " + this.contaCorrente);
+	}
+
+	public void imprimirTitular(){
+		System.out.println("O titular da conta e: " + this.titularConta);
+	}
+
+	public static void main (String[] args){
+		ContaBancaria2 cara = new ContaBancaria2();
+                ContaBancaria2 mano = new ContaBancaria2();
+                
+                cara.agencia = 1020;
+                cara.contaCorrente = 9674;
+                cara.saldo = 40.25;
+                cara.limiteExtra = 100.00;
+                cara.titularConta = "cara";
+                
+                mano.agencia = 974;
+                mano.contaCorrente = 4589;
+                mano.saldo = 66.20;
+                mano.limiteExtra = 55.00;
+                mano.titularConta = "mano";
+                
+                cara.imprimirTitular();
+                cara.imprimirAgencia();
+                cara.imprimirContaCorrente();
+                cara.imprimirSaldo();
+                cara.imprimirSaldoTotal();
+                
+                System.out.println("");
+                
+                mano.imprimirTitular();
+                mano.imprimirAgencia();
+                mano.imprimirContaCorrente();
+                mano.imprimirSaldo();
+                mano.imprimirSaldoTotal();
+	}
+
+}
