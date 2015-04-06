@@ -1,58 +1,86 @@
 import java.util.Scanner;
 public class Cpf {
-    public String lerCpf(){
-        Scanner input = new Scanner( System.in );
-        String cpf = input.next();
-        return cpf;
-    }
-    public int[] getCaracter(String w){
-        int[] x = new int[11];
-        for (int i = 0; i < 9; i++) {
-            char caracter = w.charAt(i);
-            x[i] = Character.getNumericValue(caracter);
-        }
-        return x;
-    }
-    public int getx9(int[] x){
-        int j = 10, x =0, i;
-        for (i = 9; i > 0; i--) {
-            x =+ x[i] * (j--);
-        }    
-            if( x % 11 < 2){
-                x[9] = 0;
-            }else{
-                x[9] = (11-(x % 11));
+    
+       
+    
+    public static void main(String[] args) {
+        int cpf[] = new int[11];
+        int peso[] = new int[11];
+        int mult[] = new int[11];
+        int i, soma=0;
+        String Cpf;
+        int p = 2;
+        int x = 0,y = 0;
+        
+        
+     
+            Scanner input = new Scanner ( System.in);
+            System.out.println( "Digite os 9 primeiros digitos do seu cpf: ");
+                Cpf = input.next();
+                
+                
+              
+     
+            for ( i=8; i>=0; i--){
+                cpf[i] = Character.getNumericValue(Cpf.charAt(i));
             }
-        return x[9];
-    }
-    public int getx10(int[] x){
-        int i, x, j = 11, z = 0;
-        for (i = 10; i > 0; i--) {
-            x =+ x[i] * (j--);
+            
+            
+      
+            for ( i=8; i >=0; i--){
+                peso[i] = p;
+                p++;
         }
-        if( z % 11 < 2){
-            x[10] = 0;
-        }else{
-            x[10] = (11-(z%11));
-        }
-        return x[10];
-    }
+           
+     
+           
+            for ( i = 8; i >=0; i--){
+                mult [i] = peso[i] * cpf[i];
+            }
+                
+        
+                
+            for ( i = 0; i <=8; i++){
+            soma += mult[i];
+            }
+   
+                if ((soma % 11)<2){
+                 x = 0;
+                }
+             
+             else {
+                 x = ( 11 - (soma % 11) ) ;
+             }
+              
+        
     
-    
- 
-    public static void main (String[] args){
-        int[] x = new int[11];
-        Cpf n = new Cpf();
-        String w;
-        w = n.lerCpf();
-        x = n.getCaracter(w);
-        x[9] = n.getx9(x);
-        x[10] = n.getx10(x);
-        System.out.print("CPF é: ");
-        int i = 0;
-        for (i = 0; i<11 ;i++){
-            System.out.print(x[i]);
+            p = 2;
+            for ( i=0; i <=8; i++){
+                peso[i] = p;
+                p++;
         }
-    }                                                                    
+           
+
+           mult[i] = 0;
+            for ( i=0; i <=8; i++){
+                mult [i] = peso[i] * cpf[i];
+            }
+                
+    
+            soma = 0;
+            for ( i = 0; i <=8; i++){
+            soma += mult[i];
+            }
+
+                if ((soma % 11)<2){
+                 y = 0;
+                }
+             
+             else {
+                 y = ( 11 - (soma % 11) ) ;
+             }
+
+         System.out.println(" Seu CPF eh : " + Cpf + x + y);
+    }
     
 }
